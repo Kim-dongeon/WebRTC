@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <input id="msg"><button id="btSend" onclick="dosend">send</button>
+  </body>
+  <script>
+    var ws = new WebSocket("ws://127.0.0.1:3000n/echo");
+    ws.onopen = function(){
+      console.info("ws open");
+    };
+    ws.onclose = function(evt){
+      console.info("ws onclose");
+    };
+    ws.onopen = function(){
+      console.info("ws onmessage"+evr.data);
+    };
+
+    function dosend(){
+      console.info("dosend");
+      var data = document.querySelector("msg").value;
+      ws.send(data);
+    }
+    </script>
+    }
+</html>
