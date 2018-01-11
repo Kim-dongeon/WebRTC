@@ -10,6 +10,9 @@ var vid1 = document.querySelector('#vid1');
 var vid2 = document.querySelector('#vid2');
 var btn_start = document.querySelector('#btn_start');
 var roomId = document.querySelector('#room_id');
+var Nick = document.querySelector('#Nick');
+var Name = document.querySelector('#Name');
+var btn_change = document.querySelector('#btn_change');
 
 btn_start.addEventListener('click', onStart);
 // ---------------------------------------------------------------------------------
